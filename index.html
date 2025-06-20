@@ -5,78 +5,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ECOFI - Servicios Contables y Fiscales</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: #f4f4f4;
       color: #333;
     }
     header {
-      background-color: #003366;
+      background: url('https://images.unsplash.com/photo-1605902711622-cfb43c44367e') no-repeat center center/cover;
       color: #fff;
-      padding: 20px;
       text-align: center;
+      padding: 80px 20px;
     }
-    h1, h2 {
-      color: #003366;
+    header img {
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
     }
     .section {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
-    .services ul {
-      list-style: none;
-      padding: 0;
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-    .services li {
-      margin-bottom: 15px;
-      padding-left: 20px;
-      position: relative;
+    .service-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .services li::before {
-      content: '\2714';
-      position: absolute;
-      left: 0;
+    .service-card i {
+      font-size: 2em;
       color: #007acc;
+      margin-bottom: 10px;
     }
-    footer {
+    .cta, footer {
+      text-align: center;
       background-color: #003366;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
+      color: white;
+      padding: 30px 20px;
     }
-    .cta {
+    .cta p {
+      font-size: 1.2em;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
       background-color: #007acc;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      border-radius: 8px;
-      margin-top: 20px;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    .cta a {
-      color: #fff;
-      text-decoration: underline;
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .testimonios {
+      background-color: #fff;
+      padding: 40px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .testimonio {
+      margin-bottom: 20px;
+    }
+    .testimonio p {
+      font-style: italic;
+    }
+    .testimonio h4 {
+      margin-top: 10px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="https://kike24021.github.io/ECOFI/assets/logo.png" alt="ECOFI Logo">
     <h1>ECOFI</h1>
     <p>Excelencia en Beneficio del Contribuyente</p>
   </header>
 
+  <nav>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
   <div class="container">
-    <section class="section" id="nosotros">
+    <section id="nosotros" class="section">
       <h2>¿Quiénes Somos?</h2>
-      <p>
-        Somos un despacho contable y fiscal comprometido con ofrecer soluciones efectivas y estratégicas a contribuyentes individuales y empresas. Nuestra experiencia nos permite ayudarte a cumplir tus obligaciones fiscales de manera profesional y oportuna, generando confianza y seguridad jurídica.
-      </p>
+      <p>Somos un despacho contable y fiscal comprometido con ofrecer soluciones efectivas y estratégicas a contribuyentes individuales y empresas. Nuestra experiencia nos permite ayudarte a cumplir tus obligaciones fiscales de manera profesional y oportuna, generando confianza y seguridad jurídica.</p>
       <ul>
         <li>Contadores públicos titulados y certificados</li>
         <li>Enfoque en resultados, ética y atención personalizada</li>
@@ -84,28 +158,77 @@
       </ul>
     </section>
 
-    <section class="section services" id="servicios">
+    <section id="servicios" class="section">
       <h2>Servicios Contables y Fiscales</h2>
-      <ul>
-        <li><strong>Contabilidad General:</strong> Registro de operaciones, estados financieros, cumplimiento mensual.</li>
-        <li><strong>Declaraciones y Cumplimiento Fiscal:</strong> Declaraciones ISR, IVA, IEPS y DIOT. Atención a requerimientos SAT.</li>
-        <li><strong>Nómina y Seguridad Social:</strong> Cálculo de nómina, IMSS, cuotas obrero-patronales.</li>
-        <li><strong>Auditorías y Revisión Fiscal:</strong> Auditorías internas, revisiones electrónicas, diagnóstico fiscal.</li>
-        <li><strong>Asesoría Fiscal Personalizada:</strong> Planeación, defensa fiscal, revisión de deducciones.</li>
-        <li><strong>Servicios Especializados:</strong> Trámites ante SAT, IMSS, INFONAVIT, devoluciones y compensaciones.</li>
-      </ul>
+      <div class="services">
+        <div class="service-card">
+          <i class="fas fa-book"></i>
+          <h3>Contabilidad General</h3>
+          <p>Registro de operaciones, estados financieros, cumplimiento mensual.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <h3>Declaraciones Fiscales</h3>
+          <p>ISR, IVA, IEPS, DIOT, atención a requerimientos SAT.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-users"></i>
+          <h3>Nómina y Seguridad Social</h3>
+          <p>Cálculo de nómina, IMSS, cuotas obrero-patronales.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-search-dollar"></i>
+          <h3>Auditorías y Revisión Fiscal</h3>
+          <p>Auditorías internas, revisiones electrónicas, diagnóstico fiscal.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-balance-scale"></i>
+          <h3>Asesoría Fiscal</h3>
+          <p>Planeación, defensa fiscal, revisión de deducciones.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-tools"></i>
+          <h3>Trámites Especializados</h3>
+          <p>Trámites ante SAT, IMSS, INFONAVIT, devoluciones y compensaciones.</p>
+        </div>
+      </div>
     </section>
 
-    <div class="cta">
-      <h2>¿Necesitas asesoría contable o fiscal?</h2>
-      <p>Contáctanos hoy mismo y recibe una consulta gratuita.</p>
-      <p><strong>📞 246-310-2014</strong> | <strong>📧 ecofi.contacto@gmail.com</strong></p>
-    </div>
+    <section id="testimonios" class="section testimonios">
+      <h2>Testimonios</h2>
+      <div class="testimonio">
+        <p>“Gracias a ECOFI por su excelente atención y profesionalismo. Nos ayudaron a regularizar nuestras obligaciones fiscales sin contratiempos.”</p>
+        <h4>- Juan Pérez, Emprendedor</h4>
+      </div>
+      <div class="testimonio">
+        <p>“Recomiendo ampliamente sus servicios. Siempre atentos, puntuales y claros en sus asesorías.”</p>
+        <h4>- Laura Gómez, Empresaria</h4>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <h2>Contáctanos</h2>
+      <form>
+        <input type="text" placeholder="Nombre completo" required />
+        <input type="email" placeholder="Correo electrónico" required />
+        <textarea rows="4" placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </div>
+
+  <div class="cta">
+    <h2>¿Necesitas asesoría contable o fiscal?</h2>
+    <p>Contáctanos hoy mismo y recibe una consulta gratuita.</p>
+    <p><strong>📞 246-310-2014</strong> | <strong>📧 ecofi.contacto@gmail.com</strong></p>
   </div>
 
   <footer>
     <p>&copy; 2025 ECOFI - Todos los derechos reservados</p>
   </footer>
+
+  <a href="https://wa.me/5212463102014" class="whatsapp-button" title="Contáctanos por WhatsApp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 </body>
 </html>
-
