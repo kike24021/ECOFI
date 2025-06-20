@@ -1,175 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ECOFI | Despacho Contable Fiscal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECOFI - Servicios Contables y Fiscales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0; padding: 0; box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
     body {
-      line-height: 1.6;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
       color: #333;
     }
     header {
       background-color: #003366;
-      color: white;
-      padding: 20px 40px;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
     }
-    header h1 {
-      font-size: 2em;
+    h1, h2 {
+      color: #003366;
     }
-    nav {
-      margin-top: 10px;
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
     }
-    nav a {
-      color: white;
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    section {
-      padding: 40px;
-    }
-    .intro {
-      background-color: #f4f4f4;
-    }
-    .intro h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-    .services h2, .about h2, .contact h2 {
-      font-size: 1.6em;
-      margin-bottom: 15px;
+    .section {
+      margin-bottom: 40px;
     }
     .services ul {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
     .services li {
-      margin-bottom: 10px;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 500px;
-    }
-    input, textarea {
       margin-bottom: 15px;
-      padding: 10px;
-      font-size: 1em;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      padding-left: 20px;
+      position: relative;
     }
-    button {
-      background-color: #003366;
-      color: white;
-      padding: 10px;
-      border: none;
-      font-weight: bold;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #00509e;
-    }
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      border: none;
-      padding: 12px 16px;
-      border-radius: 50%;
-      font-size: 24px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      cursor: pointer;
-      text-decoration: none;
-      z-index: 1000;
-    }
-    .whatsapp-button:hover {
-      background-color: #1ebe5d;
+    .services li::before {
+      content: '\2714';
+      position: absolute;
+      left: 0;
+      color: #007acc;
     }
     footer {
       background-color: #003366;
-      color: white;
+      color: #fff;
       text-align: center;
       padding: 20px;
     }
-    .horarios {
-      background-color: #f4f4f4;
-      text-align: center;
+    .cta {
+      background-color: #007acc;
+      color: #fff;
       padding: 20px;
-      font-size: 1em;
+      text-align: center;
+      border-radius: 8px;
+      margin-top: 20px;
     }
-    @media (max-width: 768px) {
-      header, section {
-        padding: 20px;
-      }
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
+    .cta a {
+      color: #fff;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>ECOFI</h1>
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <p>Excelencia en Beneficio del Contribuyente</p>
   </header>
 
-  <section class="intro">
-    <h2>Asesoría Contable y Fiscal en México</h2>
-    <p>En ECOFI brindamos soluciones profesionales para empresas y personas físicas, ayudándote a cumplir con tus obligaciones fiscales y optimizar tus finanzas.</p>
-  </section>
+  <div class="container">
+    <section class="section" id="nosotros">
+      <h2>¿Quiénes Somos?</h2>
+      <p>
+        Somos un despacho contable y fiscal comprometido con ofrecer soluciones efectivas y estratégicas a contribuyentes individuales y empresas. Nuestra experiencia nos permite ayudarte a cumplir tus obligaciones fiscales de manera profesional y oportuna, generando confianza y seguridad jurídica.
+      </p>
+      <ul>
+        <li>Contadores públicos titulados y certificados</li>
+        <li>Enfoque en resultados, ética y atención personalizada</li>
+        <li>Más de 10 años de experiencia en el área fiscal y contable</li>
+      </ul>
+    </section>
 
-  <section class="services" id="servicios">
-    <h2>Servicios</h2>
-    <ul>
-      <li>Contabilidad general y financiera</li>
-      <li>Declaraciones fiscales mensuales y anuales</li>
-      <li>Auditoría interna y externa</li>
-      <li>Asesoría en cumplimiento fiscal</li>
-      <li>Trámites ante el SAT</li>
-      <li>Nómina y seguridad social</li>
-    </ul>
-  </section>
+    <section class="section services" id="servicios">
+      <h2>Servicios Contables y Fiscales</h2>
+      <ul>
+        <li><strong>Contabilidad General:</strong> Registro de operaciones, estados financieros, cumplimiento mensual.</li>
+        <li><strong>Declaraciones y Cumplimiento Fiscal:</strong> Declaraciones ISR, IVA, IEPS y DIOT. Atención a requerimientos SAT.</li>
+        <li><strong>Nómina y Seguridad Social:</strong> Cálculo de nómina, IMSS, cuotas obrero-patronales.</li>
+        <li><strong>Auditorías y Revisión Fiscal:</strong> Auditorías internas, revisiones electrónicas, diagnóstico fiscal.</li>
+        <li><strong>Asesoría Fiscal Personalizada:</strong> Planeación, defensa fiscal, revisión de deducciones.</li>
+        <li><strong>Servicios Especializados:</strong> Trámites ante SAT, IMSS, INFONAVIT, devoluciones y compensaciones.</li>
+      </ul>
+    </section>
 
-  <section class="about" id="nosotros">
-    <h2>Sobre ECOFI</h2>
-    <p>Somos un despacho contable con sede en México comprometido con ofrecer servicios confiables, éticos y actualizados. Nuestro equipo está formado por contadores certificados con experiencia en diversos sectores económicos.</p>
-  </section>
-
-  <section class="contact" id="contacto">
-    <h2>Contacto</h2>
-    <form action="mailto:contacto@ecofi.mx" method="POST" enctype="text/plain">
-      <input type="text" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" name="correo" placeholder="Tu correo electrónico" required>
-      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-      <button type="submit">Enviar mensaje</button>
-    </form>
-  </section>
-
-  <section class="horarios">
-    <h2>Horarios de Atención</h2>
-    <p>Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 1:00 PM<br>Domingos: Cerrado</p>
-  </section>
-
-  <a class="whatsapp-button" href="https://wa.me/5215512345678?text=Hola%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20ECOFI" target="_blank" title="Enviar mensaje por WhatsApp">
-    ☎
-  </a>
+    <div class="cta">
+      <h2>¿Necesitas asesoría contable o fiscal?</h2>
+      <p>Contáctanos hoy mismo y recibe una consulta gratuita.</p>
+      <p><strong>📞 246-310-2014</strong> | <strong>📧 ecofi.contacto@gmail.com</strong></p>
+    </div>
+  </div>
 
   <footer>
-    <p>&copy; 2025 ECOFI. Todos los derechos reservados.</p>
+    <p>&copy; 2025 ECOFI - Todos los derechos reservados</p>
   </footer>
 </body>
 </html>
+
